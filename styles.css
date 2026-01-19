@@ -83,6 +83,23 @@ body {
   box-shadow: 0 6px 18px rgba(219,39,119,0.12);
 }
 
+.nav-link-btn {
+  display: inline-block;          /* робимо як кнопку */
+  padding: 8px 12px;              /* відступи як у твоїх кнопок */
+  border-radius: 9999px;          /* круглі краї */
+  text-decoration: none;          /* прибираємо підкреслення */
+  color: var(--accent);           /* колір тексту */
+  background: transparent;        /* як у звичайної кнопки */
+  cursor: pointer;
+  transition: all 0.3s ease;      /* плавний ефект */
+}
+
+.nav-link-btn:hover {
+  background: linear-gradient(90deg, var(--bg1), var(--bg2));
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(219,39,119,0.12);
+}
+
 
 main {
   padding-top: 80px; 
