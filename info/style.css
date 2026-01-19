@@ -1,0 +1,160 @@
+:root {
+  --pink-1: #ffeef8;
+  --pink-2: #ffd0e8;
+  --pink-3: #ff9ecd;
+  --accent: #ff66b2;
+  --text-dark: #2b1f2a;
+  --container: 1100px;
+  --header-height: 80px;
+  --header-gap: 1rem;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(180deg, #fff7fb, #ffe3f2);
+  color: var(--text-dark);
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--header-height);
+  background: rgba(252,231,243,0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid #fbcfe8;
+  z-index: 1000;
+}
+header > .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand-logo { width: 64px; }
+.brand { text-decoration: none; color: inherit; font-size: 1rem; }
+.nav { display: flex; gap: .5rem; }
+.nav-btn {
+  padding: .4rem .7rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  background: transparent;
+  border: 2px solid transparent;
+}
+.nav-btn.active {
+  background: linear-gradient(180deg, var(--pink-2), var(--pink-1));
+}
+
+/* Main + offset for header */
+main {
+  padding-top: calc(var(--header-height) + var(--header-gap));
+  padding-bottom: 3rem;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(180deg, #fff, #ffeaf4);
+  padding: 1rem;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+}
+.hero h1 { margin: 0; font-size: 1.1rem; }
+.meta { font-size: .7rem; color: #6b5264; margin-top: .4rem; }
+
+/* Content layout */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 330px;
+  gap: 1rem;
+}
+@media (max-width: 920px) {
+  .content { grid-template-columns: 1fr; }
+}
+
+/* Article / authors grid */
+.author-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: .9rem;
+}
+
+.author {
+  background: linear-gradient(180deg, var(--pink-1), #fff);
+  padding: .8rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(43,31,42,0.06);
+  text-align: center;
+}
+
+.author h3 {
+  font-size: .85rem;
+  margin: .6rem 0 .4rem 0;
+}
+.author p {
+  font-size: .75rem;
+  color: #6b5264;
+  margin: 0;
+}
+
+/* Піксельні рамки / картинки */
+.pixel-frame {
+  display: inline-block;
+  padding: 4px;
+  background: var(--pink-2);
+  border-radius: 6px;
+  /* можеш змінити рамку під стиль */
+}
+.pixel-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.author .pixel-frame:hover .pixel-image {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(43,31,42,0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Aside / sidebar */
+aside {
+  background: linear-gradient(180deg, #fff, #fff0f7);
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(43,31,42,0.04);
+}
+aside h4 {
+  margin: 0 0 .5rem 0;
+  font-size: .85rem;
+}
+aside p {
+  font-size: .75rem;
+  margin: .3rem 0;
+  color: var(--text-dark);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: .75rem;
+  color: #6b5264;
+  margin-top: 2rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 520px) {
+  :root { --header-height: 96px; }
+  .nav-btn { font-size: .7rem; padding: .3rem .45rem; }
+}

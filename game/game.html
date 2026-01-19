@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cat Catcher Game</title>
+
+<!-- Шрифт Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<!-- Стилі -->
+<link rel="stylesheet" href="style.css">
+</head>    
+<body>
+
+<header class="site-header">
+    <div class="container header-row">
+        <button class="brand" aria-label="Books & Cats">
+            <img src="Logo3.svg" alt="" class="brand-logo">
+             <a class="brand" href="C:\Users\khoda\OneDrive\Навчання Анна\Informatika1\3.12\index.html"><strong>Books & Cats - Mini-Game</strong></a>
+        </button>
+        <nav class="nav">
+            <a class="nav-btn" href="C:\Users\khoda\OneDrive\Навчання Анна\Informatika1\3.12\index.html">Home</a>
+            <a class="nav-btn" href="C:\Users\khoda\OneDrive\Навчання Анна\Informatika1\3.12\info\info.html">Info</a>
+            <a class="nav-btn" href="C:\Users\khoda\OneDrive\Навчання Анна\Informatika1\3.12\gallery\gallery.html">Gallery</a>
+            <a class="nav-btn active" href="mini-game.html">Game</a>
+			<a class="nav-btn active" href="C:\Users\khoda\OneDrive\Навчання Анна\Informatika1\3.12\form\form.html">Form</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+<div id="game-container">
+    <h1>Catch cats! </h1>
+
+    <div id="game-area">
+        <div id="basket">
+            <img src="basket.gif" alt="кошик" class="basket-img">
+        </div>
+    </div>
+
+    <div class="hud">
+        <div>Score: <span id="score">0</span></div>
+        <div>Skipped: <span id="missed">0</span>/3</div>
+    </div>
+
+    <button id="start-btn">Start</button>
+</div>
+</main>
+
+<script src="game.js"></script>
+</body>
+</html>
