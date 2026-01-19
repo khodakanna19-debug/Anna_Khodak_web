@@ -55,7 +55,7 @@ header > .container {
   background: linear-gradient(180deg, var(--pink-2), var(--pink-1));
 }
 
-/* Main + offset for header */
+/* Main */
 main {
   padding-top: calc(var(--header-height) + var(--header-gap));
   padding-bottom: 3rem;
@@ -71,7 +71,7 @@ main {
 .hero h1 { margin: 0; font-size: 1.1rem; }
 .meta { font-size: .7rem; color: #6b5264; margin-top: .4rem; }
 
-/* Content layout */
+/* Content */
 .content {
   display: grid;
   grid-template-columns: 1fr 330px;
@@ -106,13 +106,13 @@ main {
   margin: 0;
 }
 
-/* Піксельні рамки / картинки */
+
 .pixel-frame {
   display: inline-block;
   padding: 4px;
   background: var(--pink-2);
   border-radius: 6px;
-  /* можеш змінити рамку під стиль */
+  
 }
 .pixel-image {
   width: 100%;
@@ -128,7 +128,7 @@ main {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* Aside / sidebar */
+/* sidebar */
 aside {
   background: linear-gradient(180deg, #fff, #fff0f7);
   padding: 1rem;
@@ -145,6 +145,12 @@ aside p {
   color: var(--text-dark);
 }
 
+.quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 60px; 
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -158,3 +164,4 @@ footer {
   :root { --header-height: 96px; }
   .nav-btn { font-size: .7rem; padding: .3rem .45rem; }
 }
+
