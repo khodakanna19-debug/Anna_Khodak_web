@@ -22,7 +22,7 @@ function recalcSizes(){
 window.addEventListener('resize', recalcSizes);
 window.addEventListener('load', recalcSizes);
 
-// Керування кошиком
+
 function setupBasketDrag(){
     let dragging=false, pointerId=null;
     basket.addEventListener('pointerdown', e=>{
@@ -49,7 +49,7 @@ playfield.addEventListener('pointerdown', e=>{
     basket.style.left = basketX + 'px';
 });
 
-// Спавн котиків
+
 function spawnItem(){
     const el = document.createElement('div');
     el.className='cat';
@@ -61,7 +61,7 @@ function spawnItem(){
     items.push({el, y:-50, speed:150+Math.random()*50, isGolden});
 }
 
-// Анімація
+
 function loop(){
     if(running){
         items.forEach((it,i)=>{
@@ -86,7 +86,7 @@ function loop(){
 }
 requestAnimationFrame(loop);
 
-// Почати гру
+
 function startGame(){
     running=true;
     score=0; missed=0;
@@ -102,7 +102,7 @@ function startGame(){
     window.spawnInterval=setInterval(spawnItem,1200);
 }
 
-// Кінець гри
+
 function endGame(){
     running=false;
     clearInterval(window.spawnInterval);
@@ -117,3 +117,4 @@ function endGame(){
 }
 
 startBtn.addEventListener('click', startGame);
+
